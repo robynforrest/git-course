@@ -5,8 +5,7 @@
 
 \title[git-course]{Motivation for using \gh}
 \author{Andrew Edwards \& Chris Grandin}
-\date{\coursedates}
-
+\date{\today}
 
 \begin{document}
 %% Needed to remove 'Figure:' from figure captions:
@@ -195,7 +194,7 @@
 }
 
 
-\frame{\frametitle{Pacific Hake assessment}
+\frame{\frametitle{Hake assessment}
 
   \bi 
     \item Collaboration between four/five US and Canadian scientists.
@@ -207,7 +206,7 @@
   \ei
 }
 
-\frame{\frametitle{Pacific Hake assessment}
+\frame{\frametitle{Hake assessment}
   \bi
     \item After running models we can now automatically generate full document, including all numbers, figures and tables (via knitr and latex, all shared on \gh).
 
@@ -220,32 +219,6 @@
      keepaspectratio]
      {figures/trevorTweet}
 }
-
-\frame{\frametitle{Groundfish data synopsis}
-  \bi
-  \item ``A reproducible data synopsis for over 100 species of British Columbia
-    groundfish'' (Anderson, Keppel \& Edwards, submitted)
-  \item Report generation fully automated:
-    \bi
-    \item pull data from databases
-    \item fit models
-    \item generate plots
-    \item stitch together document
-      \ei
-    \item Facilitates annual publication, reproducibility, and transparency
-    \item Goals:
-      \bi
-      \item enable regular review by groundfish scientists and managers of
-        trends in survey indices
-      \item generate standardized datasets and visualizations for a planned
-        data-limited approach
-      \item increase data transparency between Fisheries and Oceans Canada, the
-        fishing industry, non-governmental organizations, and the public.
-      \ei
-    \ei
-}
-    
-  
 
 \frame{\frametitle{Who wrote that piece of garbage?}
 
@@ -283,28 +256,6 @@ And you don't have to follow up with co-authors (who do have it under control):
 }
 
 
-\frame{\frametitle{Feedback from 2017 course}
-
-% Hey, you two!
-
-Wanted to send you a belated thank-you and update that using git
-
-\bi
-\item is now permanently part of my workflow
-
-\item has vastly improved the organization \& communication for a few collaborative
-projects I'm working on (making full use of ``issues'' and ``projects''
-features).
-\ei
-
-It's also had a ripple effect on the Pacific salmon world, since my excitement over the git course was the proverbial straw that got Gottfried Pestal going full tilt into git \& now it looks like all of his projects and associated DFO staff are there, too. And I just saw first signs that some of the Pacific Salmon Commission staff are starting to use it too.
-
-Now we (Gottfried \& I) are venturing into the world of {\tt .Rmd}, {\tt
-  Pandoc}, etc. and I'm going back to your course materials to get myself re-oriented.
-
-Thanks again!
-}
-
 \section{Summary}
 
 \frame{\frametitle{Summary}
@@ -313,11 +264,9 @@ Thanks again!
     \item Ideal for sharing of code.
     \item `Repositories' can be public or private.
     \item Caveat -- cannot (properly) collaborate on Word files. We will concentrate at first on just sharing code. 
-    \item We will use RMarkdown (easy) to generate a .pdf that complies with the
-      CSAS style rules. Can also use to generate Word files. So you don't have
-      to know \LaTeX.
-    \item Hake, data synopsis and other examples show how far you can get.
-    \item There \emph{is} a learning curve, but once you use \gh\ you only really need a few main commands.
+    \item BUT there's a way of converting Markdown using pandoc to generate a Word file (Sean to give a short demo tomorrow). So you don't have to learn \LaTeX.
+    \item Hake example is to show how far you can get.
+    \item There is a learning curve, but once you use \gh\ you only really need a few main commands.
   \ei
 }
 

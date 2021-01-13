@@ -1,12 +1,13 @@
+% git-for-Rworkshop.tex - using slides from other talks to give 30 minute
+%  Introduction to Git/GitHub at PBS R workshop.
 \documentclass[aspectratio=169]{beamer}
 %% For 4:3 aspect ratio:
 %% \documentclass{beamer}
 \usepackage{../git-course}
 
-\title[git-course]{Motivation for using \gh}
+\title[git-course]{Introduction to Git and \gh}
 \author{Andrew Edwards \& Chris Grandin}
-\date{\coursedates}
-
+\date{\today}
 
 \begin{document}
 %% Needed to remove 'Figure:' from figure captions:
@@ -29,7 +30,19 @@
       \item prone to errors,
       \item painful.
     \ei
-    \item With complex code we need to have {\red identical} folder structures on each other's computers. 
+    \item With complex code we need to have {\red identical} folder structures on each other's computers.
+  \ei
+}
+
+\frame{\frametitle{Definitions}
+  \bi
+    \item {\red Git} allows you to continually save the latest versions
+       of your files (e.g. R code) as you work on them (`version control').
+    \item It also allows you to go back to any previous version of your files.
+    \item {\red GitHub} is a website that hosts a copy of the code and enables
+       users to easily collaborate.
+    \item We use these to collaborate when writing code and producing documents 
+       (such as stock assessments), and to easily share code with others.
   \ei
 }
 
@@ -42,7 +55,7 @@
         width=\textwidth,
         height=0.8\textheight,
         keepaspectratio]
-        {figures/interim.png}
+        {../git-motivation/figures/interim.png}
   %\vspace{-3mm}
   %\caption{\tiny\url{https://www.reddit.com/user/NegativePitch}}
   \end{figure}
@@ -58,7 +71,7 @@
         width=\textwidth,
         height=0.8\textheight,
         keepaspectratio]
-        {figures/procEmail.png}
+        {../git-motivation/figures/procEmail.png}
   %\vspace{-3mm}
   %\caption{\tiny\url{https://www.reddit.com/user/NegativePitch}}
   \end{figure}
@@ -74,7 +87,7 @@
         width=\textwidth,
         height=0.8\textheight,
         keepaspectratio]
-        {figures/EAversions.png}
+        {../git-motivation/figures/EAversions.png}
   \end{figure}
 }
 
@@ -89,26 +102,9 @@
         width=\textwidth,
         height=0.8\textheight,
         keepaspectratio]
-        {figures/proposalEmail.png}
+        {../git-motivation/figures/proposalEmail.png}
   \end{figure}
 }
-
-\frame{\frametitle{Can then avoid very annoying situations}
-
-  Can all keep up with the latest version (checking and merging each 
-  other's work along the way), rather than ...
-
-  \centering
-  \begin{figure}
-    \includegraphics[
-        width=\textwidth,
-        height=0.8\textheight,
-        keepaspectratio]
-        {figures/dogsBreakfast.png}
-  \end{figure}
-}
-
-
 
 \section{\gh\ advantages}
 
@@ -122,7 +118,7 @@
      width=\textwidth,
      height=0.6\textheight,
      keepaspectratio]
-     {figures/netWorkGraph1}
+     {../git-motivation/figures/netWorkGraph1}
 }
 
 \frame{\frametitle{Can easily catch up with collaborator}
@@ -135,7 +131,7 @@
      width=\textwidth,
      height=0.6\textheight,
      keepaspectratio]
-     {figures/netWorkGraph2}
+     {../git-motivation/figures/netWorkGraph2}
 
   I did nothing in that time ... 
 
@@ -151,7 +147,7 @@
      width=\textwidth,
      height=0.6\textheight,
      keepaspectratio]
-     {figures/netWorkGraph3}
+     {../git-motivation/figures/netWorkGraph3}
 
   ~\\
   All files that Chris edited got updated, plus I now have any new files he created, and our folder structures are identical. 
@@ -163,7 +159,7 @@
      width=\textwidth,
      height=0.80\textheight,
      keepaspectratio]
-     {figures/MEEcodeQuest}
+     {../git-motivation/figures/MEEcodeQuest}
 
 
   Rather than go to the code on my laptop that I haven't looked at for six months, I could click on link and answer very quickly.
@@ -175,27 +171,13 @@
      width=\textwidth,
      height=0.80\textheight,
      keepaspectratio]
-     {figures/MEEcodeAnswer}
+     {../git-motivation/figures/MEEcodeAnswer}
 
 ~\\
   Can provide a clear answer with a link to the file I'm talking about. No ambiguity.
 }
 
-
-
-\frame{\frametitle{I wanted to check if I'd changed anything in the last month}
-
-  \includegraphics[
-     width=\textwidth,
-     height=0.80\textheight,
-     keepaspectratio]
-     {figures/history}
-
-  I hadn't thought of that before [on \gh: Code -- $<$click file$>$ -- History].
-}
-
-
-\frame{\frametitle{Pacific Hake assessment}
+\frame{\frametitle{Hake assessment}
 
   \bi 
     \item Collaboration between four/five US and Canadian scientists.
@@ -207,7 +189,7 @@
   \ei
 }
 
-\frame{\frametitle{Pacific Hake assessment}
+\frame{\frametitle{Hake assessment}
   \bi
     \item After running models we can now automatically generate full document, including all numbers, figures and tables (via knitr and latex, all shared on \gh).
 
@@ -218,34 +200,8 @@
      width=\textwidth,
      height=0.50\textheight,
      keepaspectratio]
-     {figures/trevorTweet}
+     {../git-motivation/figures/trevorTweet}
 }
-
-\frame{\frametitle{Groundfish data synopsis}
-  \bi
-  \item ``A reproducible data synopsis for over 100 species of British Columbia
-    groundfish'' (Anderson, Keppel \& Edwards, submitted)
-  \item Report generation fully automated:
-    \bi
-    \item pull data from databases
-    \item fit models
-    \item generate plots
-    \item stitch together document
-      \ei
-    \item Facilitates annual publication, reproducibility, and transparency
-    \item Goals:
-      \bi
-      \item enable regular review by groundfish scientists and managers of
-        trends in survey indices
-      \item generate standardized datasets and visualizations for a planned
-        data-limited approach
-      \item increase data transparency between Fisheries and Oceans Canada, the
-        fishing industry, non-governmental organizations, and the public.
-      \ei
-    \ei
-}
-    
-  
 
 \frame{\frametitle{Who wrote that piece of garbage?}
 
@@ -253,7 +209,7 @@
      width=\textwidth,
      height=0.80\textheight,
      keepaspectratio]
-     {figures/blame}
+     {../git-motivation/figures/blame}
 
 ~\\
   Can be useful [on \gh: Code -- $<$click file$>$ -- Blame].
@@ -267,7 +223,7 @@ Rather than lots of emails that get forgotten, the to-do list actually gets comp
      width=\textwidth,
      height=0.80\textheight,
      keepaspectratio]
-     {figures/hakeIssues}
+     {../git-motivation/figures/hakeIssues}
 }
 
 \frame{\frametitle{Can properly keep track of (and discuss) issues}
@@ -279,30 +235,17 @@ And you don't have to follow up with co-authors (who do have it under control):
      width=\textwidth,
      height=0.80\textheight,
      keepaspectratio]
-     {figures/captionEmail}
+     {../git-motivation/figures/captionEmail}
 }
 
-
-\frame{\frametitle{Feedback from 2017 course}
-
-% Hey, you two!
-
-Wanted to send you a belated thank-you and update that using git
-
-\bi
-\item is now permanently part of my workflow
-
-\item has vastly improved the organization \& communication for a few collaborative
-projects I'm working on (making full use of ``issues'' and ``projects''
-features).
-\ei
-
-It's also had a ripple effect on the Pacific salmon world, since my excitement over the git course was the proverbial straw that got Gottfried Pestal going full tilt into git \& now it looks like all of his projects and associated DFO staff are there, too. And I just saw first signs that some of the Pacific Salmon Commission staff are starting to use it too.
-
-Now we (Gottfried \& I) are venturing into the world of {\tt .Rmd}, {\tt
-  Pandoc}, etc. and I'm going back to your course materials to get myself re-oriented.
-
-Thanks again!
+\frame{\frametitle{Hake assessment}
+  \bi
+    \item For hake assessment:
+      \url{https://github.com/andrew-edwards/hake-assessment/network}\\
+    \item What's been happening recently?\\
+    \item Scroll back to show some complexity.\\
+    \item Click on `Contributors'.
+  \ei
 }
 
 \section{Summary}
@@ -310,17 +253,71 @@ Thanks again!
 \frame{\frametitle{Summary}
 
   \bi
-    \item Ideal for sharing of code.
+    \item Ideal for sharing of R code.
     \item `Repositories' can be public or private.
-    \item Caveat -- cannot (properly) collaborate on Word files. We will concentrate at first on just sharing code. 
-    \item We will use RMarkdown (easy) to generate a .pdf that complies with the
-      CSAS style rules. Can also use to generate Word files. So you don't have
-      to know \LaTeX.
-    \item Hake, data synopsis and other examples show how far you can get.
-    \item There \emph{is} a learning curve, but once you use \gh\ you only really need a few main commands.
+    \item Caveat -- cannot (properly) collaborate on Word files.
+    \item BUT there's a way of converting Markdown using pandoc to generate a Word file.
+    \item Hake example is to show how far you can get.
+    \item There is a learning curve, but once you use \gh\ you only really need a few main commands.
   \ei
 }
 
+\section{Demonstration}
 
+\frame{\frametitle{Demonstration using code that builds these slides}
+  \bi
+    \item Idea is the same as if this was R code.
+    \item These slides are part of our \lst{git-course} repository.
+    \item I worked on these since our workshop last week. Chris had been
+      busy on other projects and so yesterday (Tues 27th) his Network Graph
+      looked like this:
+  \ei
+  \includegraphics[
+     width=\textwidth,
+     height=0.80\textheight,
+     keepaspectratio]
+     {figures/NGbeforeCmerges}
+}
+
+
+\frame{\frametitle{Demonstration on code that builds these slides}
+  \bi
+    \item This morning (Wed 27th) Chris has made some changes, added files etc.
+    \item I will show how easy it is to \lst{fetch} and then \lst{merge} his
+      edits.
+    \item I will re-run the code to build these slides.
+    \item This workflow is the same as if were working together on R code, 
+      including multiple files spread across several folders. 
+    \item We can both work on the same files.
+    \item Occasionally we will get a {\red conflict} -- we have both edited
+      the same lines of the same file.
+    \item This can be easily rectified and we can carry on.
+  \ei
+}
+
+\frame{\frametitle{Can even jump back to any earlier version}
+  \bi
+    \item I can easily go back to any earlier version.
+    \item For example, go back to before I got Chris's code and before
+      I finished this slide.\\
+    ~\\
+    \item I type \lst{git co 5320ff0}.
+    \item Rebuild these slides, and should get an earlier version for which
+      this slide is different and I no longer have Chris's slides.
+  \ei
+}
+
+\frame{\frametitle{This slide added by Chris after commit 5320ff0}
+  What to write in \lst{git com "COMMIT MESSAGE"}?\\
+  \bigskip
+  \centering
+  \begin{figure}
+    \includegraphics[
+      width=\textwidth,
+      height=0.7\textheight,
+      keepaspectratio]
+      {../git-advanced/figures/git_commit_xkcd}
+  \end{figure}
+}
 
 \end{document}

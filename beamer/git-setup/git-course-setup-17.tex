@@ -3,7 +3,7 @@
 %% \documentclass{beamer}
 \usepackage{../git-course}
 
-\title[git-course]{Setting up Git and \gh\ (and more) for the first time}
+\title[git-course]{Setting up Git and \gh\ for the first time}
 \author{Chris Grandin \& Andrew Edwards}
 
 \date{\coursedates}
@@ -16,58 +16,18 @@
 
 \frame{\frametitle{Getting started...}
   Before you start using Git you need to set up your computer to use it, and
-  install a few other programs that are useful.
-
-  ~\\
-  
-  This is a little time consuming but is a {\red one-time setup}
+  install a few other programs that are useful. This is a {\red one-time setup}
   and once it is done, you will be able to easily create new projects or join
   others in collaboration.
-
-  ~\\
-
-  These instructions are adapted slightly from those we used for a course in
-  2017, and we are unable to fully test them on a new computer. So if something
-  doesn't work then double check and then send Chris and Andy an email.
-
-  ~\\
-  We also include other programs that we need. Again, this is a {\red one-time
-    setup}, and please do it before the workshop to give time for
-  troubleshooting. If you want to know what some of these tools do, see 
-  `Overview of tools to be introduced' at
-  \url{https://github.com/pbs-assess/TTTworkshop}.
 }
-
-\frame{\frametitle{What you will end up having installed}
-  \bigskip
-  These are programs/things you will need (instructions are below). Obviously
-  skip any that you already have working.
-  \bi
-  \item A \gh\ account
-  \item Git on your computer
-  \item Diffmerge or something similar for comparing changes to files
-  \item Markdown Pad 2 or Chrome extenstion (or similar) for viewing Markdown
-    files (or let us know if you have anything better)
-  \item R -- presumably a version not \emph{too} old (though it's hard for us to specify
-    exactly what version). Also a few R packages are given here
-  \item A way of running \LaTeX\ (such as Mik\TeX\ or Pro\TeX)
-  \item A text editor that isn't Notepad
-  \item Pandoc (comes with RStudio)
-  \ei
-We realise this may seem overwhelming, but once it's all set up then you'll have
-a very powerful workflow for collaboratively building complicated and
-reproducible documents.
-}
-
-
-
 
 \frame{\frametitle{Get a \gh\ account}
   \bigskip
   \bi
     \item Sign up for \gh: \url{https://github.com}
     \item Choose a user name that will make sense to other people,
-      e.g. \textbf{andrew-edwards} or \textbf{cgrandin}, not \textbf{fishman123}.
+      e.g. \textbf{cgrandin} or
+      \textbf{andrew-edwards}, not \textbf{fishman123}.
     \item Attach a photo (headshot) to your profile. This makes it easy for
       collaborators to identify you. (If you don't have one handy you can
       attach it later -- please do so before the workshop).
@@ -99,9 +59,6 @@ reproducible documents.
       install it. If your OSX is less than 10.9, or for any other reason, you
       can install git from here:\\
       \url{https://git-scm.com/download/mac}
-    \item Linux:\\
-      You'll need the same tools. Sorry, we don't have a machine to test things
-      on, but if you're using Linux you presumably know how to install programs.
   \ei
 }
 
@@ -109,10 +66,9 @@ reproducible documents.
   \bi
     \item Windows:
       \bn
-    \item Create a \lst{github} directory, such as
-          \lst[escapechar="\\"]{C:\\github}. It is fine
-          to put it in a different path, but make sure there are no spaces
-          or special characters \emph{anywhere} in the full path.
+        \item Create the directory \lst[escapechar="\\"]{C:\\github}. If
+          you decide to use a different directory, make sure there are no spaces
+          or special characters anywhere in the full path.
         \item Open the GitHub Desktop Application. Press the gear icon and
           choose \emph{Options}.
         \item In \emph{Configure Git}, fill in your name and the
@@ -155,7 +111,7 @@ reproducible documents.
   \gh\ account name.
   \bi
     \item On the \gh\ webpage, sign into your account and navigate to:\\
-      \url{https://github.com/pbs-assess/git-course}
+      \url{https://github.com/cgrandin/git-course}
     \item Press the \emph{Fork} button. This will give you a copy of the
       git-course repository.
     \item Navigate to your new forked repository:\\
@@ -165,9 +121,8 @@ reproducible documents.
       repository, you can paste the URL into the \gs\ by pressing the right
       mouse button:\\
       \lst{git clone https://github.com/GITHUB-USER/git-course}
-    \item You now have the files for the GitHub course on your computer.
     \item MAC: Open terminal and change to the github directory:\\
-      \lst{cd ~/github}
+      \lst{cd ~/github}\\
       then run the clone command:\\
       \lst{git clone https://github.com/GITHUB-USER/git-course}
   \ei
@@ -241,14 +196,13 @@ reproducible documents.
 \frame{\frametitle{R and packages installation}
   Some exercises rely on having R installed with several packages we'll be
   using. We are assuming everyone has R installed.\\
-  Install the following packages in R (we'll need more during the workshop):\\
+  Install the following packages in R:\\
 
   \bigskip
 
   \bi
     \item \lst{knitr}
     \item \lst{xtable}
-    \item \lst{devtools}      
   \ei
 
   \bigskip
@@ -263,31 +217,18 @@ reproducible documents.
   R scripting front-end version 3.3.2 (2016-10-31)
 }
 
-\frame{\frametitle{\LaTeX\ installation -- Windows}
-  You will need \LaTeX\ installed (because it will correctly format Research
-  Documents, even though you won't need to learn \LaTeX). You will also
+\frame{\frametitle{\LaTeX\ installation}
+  Some exercises in the course rely on having \LaTeX\ installed. You will also
   be able to build all of these course presentations from code.
   \bi
-  \item If you have Rtools installed you may already have Mik\TeX installed (see
-        last bullet point below to test it).
-  \item On Windows, if you have lots of disk space ($>1.6$Gb you can use)
-        then we think it's
-        best to install it using Pro\TeX since it includes all \LaTeX\ libraries:
-        \url{https://ctan.org/pkg/protext}\\
-   \item If disk space may be a problem then install Mik\TeX\ (you may just have
-     to install further libraries during the workshop):
+    \item On Windows, install Mik\TeX:\\
       \bigskip
       \url{https://miktex.org/download}\\
       \bigskip
-   \item You can build this PDF (that you are reading) by entering the
+      You can build this PDF (that you are reading) by entering the
       \lst{beamer/git-setup} directory and double-click the \emph{build-pdf.bat}
-      file (close this PDF first) or type \lst{pdflatex git-course-setup}.
-   \ei
-}      
-
-\frame{\frametitle{\LaTeX\ installation -- Mac}
-  \bi
-  \item On MAC, install Mac\TeX:\\
+       file (close this PDF first).
+    \item On MAC, install Mac\TeX:\\
       \bigskip
       \url{http://www.tug.org/mactex/}\\
       \bigskip
@@ -307,7 +248,7 @@ reproducible documents.
   \bigskip
 
   We know that \textbf{Emacs}, \textbf{Xemacs}, \textbf{vim} are okay, as is
-  \textbf{RStudio} for \textbf{.r} (and other) files.
+  \textbf{RStudio} for \textbf{.r} files.
 
   \bigskip
 
@@ -320,27 +261,12 @@ reproducible documents.
 
   \bigskip
 
-  [Andy uses \textbf{Xemacs} for everything (including running R) as it has many keyboard shortcuts
-    and colours text and code based on the file extension; Chris uses a mixture
-    of \textbf{Xemacs} and \textbf{RStudio}.]
-}
-
-\frame{\frametitle{Pandoc}
-  \bigskip
-  If you don't use \textbf{RStudio} you need to separately install
-  \textbf{Pandoc} from \url{https://github.com/jgm/pandoc/releases/tag/2.2.3.2}.
-  \bigskip
-
-  This is used in the conversion from \textbf{Rmarkdown} code to \textbf{.pdf}.
-  \bigskip
-
-  We (Andy) found it best to choose `install for all users' then click
-  `Advanced' before Install, as you can then choose the installation folder.
-  Double check it gets added to your PATH.
+  [We use \textbf{Xemacs} for everything as it has many keyboard shortcuts
+    and colours text and code based on the file extension.]
 }
 
 \frame{\frametitle{If you work closely with others who are taking the course}
-  We expect that are at least a couple of groups of people (say, from a Region)
+  We know that are at least a couple of groups of people (salmon/herring)
   who work closely together within each group.\\
   \bigskip
   If there is code etc.~that you work on together (or plan to) then make sure
@@ -374,14 +300,14 @@ reproducible documents.
   all that means.\\
   \bigskip
   To get a sneak peek at what is to come, take a look at the git-course
-  repository on \gh (and you should already have these files on your computer):\\
+  repository on \gh:\\
   \bigskip
-  \url{https://github.com/pbs-assess/git-course}\\
+  \url{https://github.com/cgrandin/git-course}\\
   \bigskip
   In particular, the network graph which shows all our commits from the
   beginning:\\
   \bigskip
-  \url{https://github.com/pbs-assess/git-course/network}\\
+  \url{https://github.com/cgrandin/git-course/network}\\
   \bigskip
   The network graph is an invaluable tool in keeping track of what is going
   on amongst you and you collaborators. We'll get into it more in the course.

@@ -6,7 +6,7 @@
 \title[git-course]{Setting up Git and \gh\ (and more) for the first time}
 \author{Chris Grandin \& Andrew Edwards}
 
-\date{\coursedates}
+%% \date{\coursedates}
 
 \begin{document}
 
@@ -19,7 +19,7 @@
   install a few other programs that are useful.
 
   ~\\
-  
+
   This is a little time consuming but is a {\red one-time setup}
   and once it is done, you will be able to easily create new projects or join
   others in collaboration.
@@ -33,7 +33,7 @@
   ~\\
   We also include other programs that we need. Again, this is a {\red one-time
     setup}, and please do it before the workshop to give time for
-  troubleshooting. If you want to know what some of these tools do, see 
+  troubleshooting. If you want to know what some of these tools do, see
   `Overview of tools to be introduced' at
   \url{https://github.com/pbs-assess/TTTworkshop}.
 }
@@ -45,14 +45,10 @@
   \bi
   \item A \gh\ account
   \item Git on your computer
-  \item Diffmerge or something similar for comparing changes to files
-  \item Markdown Pad 2 or Chrome extenstion (or similar) for viewing Markdown
-    files (or let us know if you have anything better)
-  \item R -- presumably a version not \emph{too} old (though it's hard for us to specify
-    exactly what version). Also a few R packages are given here
-  \item A way of running \LaTeX\ (such as Mik\TeX\ or Pro\TeX)
+  \item R version 3.5.1 or later
+  \item RStudio version 1.2.1163 or later
+  \item tinytex (an R package)
   \item A text editor that isn't Notepad
-  \item Pandoc (comes with RStudio)
   \ei
 We realise this may seem overwhelming, but once it's all set up then you'll have
 a very powerful workflow for collaboratively building complicated and
@@ -92,7 +88,7 @@ reproducible documents.
       Note that some people have had issues trying to install on a DFO computer
       without having admin privileges. If so, you may have to use a different
       computer. It can also time out during installation due to a slow network
-      connection, so you may have to do this stage at home.      
+      connection, so you may have to do this stage at home.
     \item MAC:\\
       Type \emph{git} on the command line. You will either see that it
       is installed, or if you have OSX 10.9 or higher it will prompt you to
@@ -248,7 +244,7 @@ reproducible documents.
   \bi
     \item \lst{knitr}
     \item \lst{xtable}
-    \item \lst{devtools}      
+    \item \lst{devtools}
   \ei
 
   \bigskip
@@ -283,7 +279,7 @@ reproducible documents.
       \lst{beamer/git-setup} directory and double-click the \emph{build-pdf.bat}
       file (close this PDF first) or type \lst{pdflatex git-course-setup}.
    \ei
-}      
+}
 
 \frame{\frametitle{\LaTeX\ installation -- Mac}
   \bi
@@ -344,7 +340,7 @@ reproducible documents.
   who work closely together within each group.\\
   \bigskip
   If there is code etc.~that you work on together (or plan to) then make sure
-  one person has it and we will get you going with that in the course 
+  one person has it and we will get you going with that in the course
   (especially as you'll be together but often work in different locations --
   when in the same room together it will be easy to plan how you should set
   up directory structure etc.).\\
@@ -357,7 +353,7 @@ reproducible documents.
 \frame{\frametitle{To keep notes}
   Our slides are fairly detailed, but you may want to also take some notes.\\
   \bigskip
-  If so, create a file \lst{git-course/myNotes.*} the usual way {\red on 
+  If so, create a file \lst{git-course/myNotes.*} the usual way {\red on
     your computer}, where \lst{*} is \lst{txt},
   \lst{doc}, \lst{docx} or whatever you want to write in.\\
   \bigskip
